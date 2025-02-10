@@ -11,7 +11,6 @@ async function scrapeProduct(url) {
   const browser = await puppeteer.launch({
     headless: "new", // Use new headless mode
     args: ["--no-sandbox"],
-    executablePath: "/usr/bin/google-chrome-stable",
   });
 
   const page = await browser.newPage();
