@@ -2,6 +2,6 @@ services:
   - type: web
     name: share-market-scraper
     env: node
-    buildCommand: npm install
+    buildCommand: ./install-chrome.sh && npm install
     startCommand: node scrapers.js
     plan: free
