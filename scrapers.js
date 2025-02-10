@@ -3,6 +3,7 @@ const fs = require("fs");
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
+const host = "0.0.0.0";
 
 // Function to scrape data
 async function scrapeProduct(url) {
@@ -165,6 +166,6 @@ app.get("/", async (req, res) => {
 });
 
 // Start server
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.listen(port, host, () => {
+  console.log(`Server running at http://${host}:${port}`);
 });
